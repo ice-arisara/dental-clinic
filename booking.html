@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>จองคิวออนไลน์ | Living Dental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #fff 100%);
+            margin: 0;
+            color: #333;
+        }
+        header {
+            background: #0097a7;
+            color: #fff;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            height: 70px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 48px;
+            margin-right: 12px;
+        }
+        .logo span {
+            font-size: 1.7em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+        nav .nav-btn {
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 22px;
+            padding: 10px 26px;
+            font-size: 1em;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 0 2px;
+            box-shadow: 0 2px 8px rgba(0,188,212,0.08);
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+            cursor: pointer;
+            outline: none;
+        }
+        nav .nav-btn:hover, nav .nav-btn:focus {
+            background: #00796b;
+            color: #ffd600;
+            transform: translateY(-2px) scale(1.04);
+        }
+        main {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        h1 {
+            color: #0097a7;
+            margin-top: 32px;
+            margin-bottom: 24px;
+            font-size: 2em;
+            text-align: center;
+        }
+        form {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 32px 28px;
+        }
+        label {
+            font-weight: 600;
+            color: #00796b;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #b2ebf2;
+            margin-top: 4px;
+            margin-bottom: 18px;
+            font-size: 1em;
+        }
+        button[type="submit"] {
+            background: #ffd600;
+            color: #00796b;
+            border: none;
+            border-radius: 24px;
+            padding: 12px 0;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 8px;
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+        }
+        button[type="submit"]:hover, button[type="submit"]:focus {
+            background: #fffde7;
+            color: #0097a7;
+            transform: translateY(-2px) scale(1.04);
+        }
+        .alert {
+            background: #e0f7fa;
+            color: #00796b;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            text-align: center;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="โลโก้คลินิก">
+                <span>Living Dental</span>
+            </div>
+            <nav>
+                <a class="nav-btn" href="index.html">หน้าแรก</a>
+                <a class="nav-btn" href="about.html">เกี่ยวกับเรา</a>
+                <a class="nav-btn" href="service.html">บริการ</a>
+                <a class="nav-btn" href="dentist.html">ทีมทันตแพทย์</a>
+                <a class="nav-btn" href="reserv.html">จองคิว</a>
+                <a class="nav-btn" href="reviews.html">รีวิวจากลูกค้า</a>
+                <a class="nav-btn" href="contact.html">ติดต่อเรา</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>จองคิวออนไลน์</h1>
+        <div class="alert" id="alertBox"></div>
+        <form id="bookingForm" autocomplete="off">
+            <label for="name">ชื่อ-นามสกุล</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">เบอร์โทรศัพท์</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{9,10}">
+
+            <label for="service">เลือกบริการ</label>
+            <select id="service" name="service" required>
+                <option value="">-- กรุณาเลือก --</option>
+                <option value="ขูดหินปูน">ขูดหินปูน</option>
+                <option value="อุดฟัน">อุดฟัน</option>
+                <option value="จัดฟัน">จัดฟัน</option>
+                <option value="ฟอกฟันขาว">ฟอกฟันขาว</option>
+            </select>
+
+            <label for="dentist">เลือกทันตแพทย์</label>
+            <select id="dentist" name="dentist" required>
+                <option value="">-- กรุณาเลือก --</option>
+                <option value="นพ. สมชาย ใจดี">นพ. สมชาย ใจดี</option>
+                <option value="นพ. สมหญิง สุขใจ">นพ. สมหญิง สุขใจ</option>
+                <option value="นพ. วิทยา ทันใจ">นพ. วิทยา ทันใจ</option>
+            </select>
+
+            <label for="date">วันที่ต้องการจอง</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">เวลาที่ต้องการจอง</label>
+            <select id="time" name="time" required>
+                <option value="">-- กรุณาเลือก --</option>
+                <option value="09:00">09:00 น.</option>
+                <option value="10:00">10:00 น.</option>
+                <option value="11:00">11:00 น.</option>
+                <option value="13:00">13:00 น.</option>
+                <option value="14:00">14:00 น.</option>
+                <option value="15:00">15:00 น.</option>
+                <option value="16:00">16:00 น.</option>
+            </select>
+
+            <button type="submit">ยืนยันการจอง</button>
+        </form>
+    </main>
+    <script>
+        // ระบบแจ้งเตือนยืนยันการจอง (ฝั่ง client)
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('alertBox').style.display = 'block';
+            document.getElementById('alertBox').innerText = 'ขอบคุณสำหรับการจองคิว ทีมงานจะติดต่อกลับเพื่อยืนยันอีกครั้ง';
+            this.reset();
+            setTimeout(function(){
+                document.getElementById('alertBox').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
