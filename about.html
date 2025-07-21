@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เกี่ยวกับเรา | Living Dental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #fff 100%);
+            margin: 0;
+            color: #333;
+        }
+        header {
+            background: #0097a7;
+            color: #fff;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            height: 70px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 48px;
+            margin-right: 12px;
+        }
+        .logo span {
+            font-size: 1.7em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+        nav .nav-btn {
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 22px;
+            padding: 10px 26px;
+            font-size: 1em;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 0 2px;
+            box-shadow: 0 2px 8px rgba(0,188,212,0.08);
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+            cursor: pointer;
+            outline: none;
+        }
+        nav .nav-btn:hover, nav .nav-btn:focus {
+            background: #00796b;
+            color: #ffd600;
+            transform: translateY(-2px) scale(1.04);
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        section {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 32px 28px;
+            margin-bottom: 32px;
+        }
+        section h2 {
+            color: #0097a7;
+            margin-top: 0;
+            font-size: 2em;
+            margin-bottom: 18px;
+        }
+        .gallery {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 220px;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px #b2ebf2;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+        .certificates {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .certificate-card {
+            background: #e0f7fa;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,151,167,0.07);
+            padding: 18px 16px;
+            text-align: center;
+            min-width: 180px;
+            max-width: 220px;
+        }
+        .certificate-card img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        .certificate-card .cert-title {
+            font-weight: bold;
+            color: #00796b;
+            margin-bottom: 6px;
+        }
+        @media (max-width: 700px) {
+            main {
+                padding: 0 4vw;
+            }
+            .gallery, .certificates {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="โลโก้คลินิก">
+                <span>Living Dental</span>
+            </div>
+            <nav>
+                <a class="nav-btn" href="index.html">หน้าแรก</a>
+                <a class="nav-btn" href="about.html">เกี่ยวกับเรา</a>
+                <a class="nav-btn" href="index.html#services">บริการ</a>
+                <a class="nav-btn" href="index.html#dentists">ทีมทันตแพทย์</a>
+                <a class="nav-btn" href="index.html#booking">จองคิว</a>
+                <a class="nav-btn" href="index.html#reviews">รีวิวจากลูกค้า</a>
+                <a class="nav-btn" href="index.html#contact">ติดต่อเรา</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>ประวัติและวิสัยทัศน์ของคลินิก</h2>
+            <p>
+                <strong>Living Dental</strong> ก่อตั้งขึ้นโดยทีมทันตแพทย์ผู้มีประสบการณ์และความมุ่งมั่นในการดูแลสุขภาพช่องปากของทุกคน<br>
+                เราให้บริการด้วยหัวใจ ใส่ใจในทุกรายละเอียด พร้อมนำเทคโนโลยีและมาตรฐานสากลมาใช้ในทุกขั้นตอน<br><br>
+                <strong>วิสัยทัศน์:</strong> เป็นคลินิกทันตกรรมที่ทุกคนเข้าถึงได้ ให้บริการด้วยคุณภาพและความปลอดภัยสูงสุด เพื่อรอยยิ้มที่มั่นใจของทุกคน
+            </p>
+        </section>
+
+        <section>
+            <h2>บรรยากาศภายในคลินิก</h2>
+            <div class="gallery">
+                <img src="images/clinic1.jpg" alt="ภาพภายในคลินิก 1">
+                <img src="images/clinic2.jpg" alt="ภาพภายในคลินิก 2">
+                <img src="images/clinic3.jpg" alt="ภาพภายในคลินิก 3">
+            </div>
+        </section>
+
+        <section>
+            <h2>ใบรับรองและมาตรฐานความปลอดภัย</h2>
+            <div class="certificates">
+                <div class="certificate-card">
+                    <img src="images/cert-iso.png" alt="ISO Certificate">
+                    <div class="cert-title">ISO 9001:2015</div>
+                    <div>มาตรฐานระบบบริหารคุณภาพ</div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/cert-ddc.png" alt="กรมอนามัย">
+                    <div class="cert-title">กรมอนามัย</div>
+                    <div>ผ่านการรับรองคลินิกปลอดภัย</div>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/cert-safe.png" alt="เครื่องหมายรับรองความปลอดภัย">
+                    <div class="cert-title">Safety Mark</div>
+                    <div>เครื่องหมายรับรองความปลอดภัย</div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
