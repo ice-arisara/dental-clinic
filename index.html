@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Living Dental | คลินิกทันตกรรมพอเพียง</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #fff 100%);
+            margin: 0;
+            color: #333;
+        }
+        header {
+            background: #0097a7;
+            color: #fff;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            height: 70px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 48px;
+            margin-right: 12px;
+        }
+        .logo span {
+            font-size: 1.7em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+        nav .nav-btn {
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 22px;
+            padding: 10px 26px;
+            font-size: 1em;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 0 2px;
+            box-shadow: 0 2px 8px rgba(0,188,212,0.08);
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+            cursor: pointer;
+            outline: none;
+        }
+        nav .nav-btn:hover, nav .nav-btn:focus {
+            background: #00796b;
+            color: #ffd600;
+            transform: translateY(-2px) scale(1.04);
+        }
+        .hero {
+            background: url('images/hero-dental.jpg') center/cover no-repeat;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,151,167,0.55);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 60px 20px 40px 20px;
+        }
+        .hero-title {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .hero-desc {
+            font-size: 1.3em;
+            margin-bottom: 24px;
+        }
+        .cta-btn {
+            background: #ffd600;
+            color: #00796b;
+            border: none;
+            border-radius: 24px;
+            padding: 12px 38px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(255,214,0,0.12);
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .cta-btn:hover, .cta-btn:focus {
+            background: #fffde7;
+            color: #0097a7;
+            transform: translateY(-2px) scale(1.04);
+        }
+        main {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 40px 16px 0 16px;
+        }
+        .features {
+            display: flex;
+            gap: 28px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 32px 24px;
+            flex: 1 1 220px;
+            min-width: 220px;
+            max-width: 320px;
+            text-align: center;
+        }
+        .feature-card img {
+            width: 54px;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            color: #0097a7;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .feature-card p {
+            color: #444;
+            font-size: 1em;
+        }
+        section {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 32px 28px;
+            margin-bottom: 32px;
+        }
+        section h2 {
+            color: #0097a7;
+            margin-top: 0;
+            font-size: 2em;
+            margin-bottom: 18px;
+        }
+        #dentists ul {
+            list-style: none;
+            padding: 0;
+        }
+        #dentists li {
+            background: #e0f2f1;
+            margin-bottom: 10px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 1.1em;
+        }
+        #gallery {
+            text-align: center;
+        }
+        #gallery img {
+            margin: 10px 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,151,167,0.08);
+            border: 3px solid #b2ebf2;
+            transition: transform 0.2s, border-color 0.2s;
+            width: 200px;
+            height: auto;
+            object-fit: cover;
+        }
+        #gallery img:hover {
+            transform: scale(1.06);
+            border-color: #0097a7;
+        }
+        #contact p {
+            font-size: 1.1em;
+            margin: 8px 0;
+        }
+        .reviews {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .review-card {
+            background: #f9fbe7;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,151,167,0.07);
+            padding: 22px 18px;
+            max-width: 320px;
+            min-width: 220px;
+            flex: 1 1 220px;
+            margin-bottom: 12px;
+        }
+        .review-card .reviewer {
+            font-weight: bold;
+            color: #00796b;
+            margin-top: 10px;
+        }
+        @media (max-width: 900px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            main {
+                padding: 20px 4vw 0 4vw;
+            }
+        }
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 8px;
+            }
+            .logo span {
+                font-size: 1.1em;
+            }
+            .hero-title {
+                font-size: 1.3em;
+            }
+            .features, .reviews {
+                flex-direction: column;
+                gap: 12px;
+            }
+            section {
+                padding: 16px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="โลโก้คลินิก">
+                <span>Living Dental</span>
+            </div>
+            <nav>
+                <a class="nav-btn" href="index.html">หน้าแรก</a>
+                <a class="nav-btn" href="about.html">เกี่ยวกับเรา</a>
+                <a class="nav-btn" href="service.html">บริการ</a>
+                <a class="nav-btn" href="dentist.html">ทีมทันตแพทย์</a>
+                <a class="nav-btn" href="booking.html">จองคิว</a>
+                <a class="nav-btn" href="reviews.html">รีวิวจากลูกค้า</a>
+                <a class="nav-btn" href="contact.html">ติดต่อเรา</a>
+            </nav>
+        </div>
+        <div class="hero">
+            <div class="hero-content">
+                <div class="hero-title">ยิ้มมั่นใจ สุขภาพฟันแข็งแรงกับ Living Dental</div>
+                <div class="hero-desc">คลินิกทันตกรรมที่ดูแลคุณด้วยทีมทันตแพทย์ผู้เชี่ยวชาญและเทคโนโลยีทันสมัย</div>
+                <a href="#booking" class="cta-btn">จองคิวเลย</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="features">
+            <div class="feature-card">
+                <img src="images/doctor.svg" alt="ทันตแพทย์ผู้เชี่ยวชาญ">
+                <h3>ทันตแพทย์ผู้เชี่ยวชาญ</h3>
+                <p>ทีมทันตแพทย์มากประสบการณ์ พร้อมให้คำปรึกษาและดูแลอย่างใกล้ชิด</p>
+            </div>
+            <div class="feature-card">
+                <img src="images/modern.svg" alt="อุปกรณ์ทันสมัย">
+                <h3>อุปกรณ์ทันสมัย</h3>
+                <p>ใช้เทคโนโลยีและเครื่องมือที่ทันสมัย สะอาด ปลอดภัย มาตรฐานสากล</p>
+            </div>
+            <div class="feature-card">
+                <img src="images/care.svg" alt="บริการด้วยใจ">
+                <h3>บริการด้วยความใส่ใจ</h3>
+                <p>ดูแลทุกขั้นตอนด้วยความห่วงใย เหมือนคนในครอบครัว</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
