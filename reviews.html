@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>รีวิวจากลูกค้า | Living Dental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #fff 100%);
+            margin: 0;
+            color: #333;
+        }
+        header {
+            background: #0097a7;
+            color: #fff;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            height: 70px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 48px;
+            margin-right: 12px;
+        }
+        .logo span {
+            font-size: 1.7em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+        nav .nav-btn {
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 22px;
+            padding: 10px 26px;
+            font-size: 1em;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 0 2px;
+            box-shadow: 0 2px 8px rgba(0,188,212,0.08);
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+            cursor: pointer;
+            outline: none;
+        }
+        nav .nav-btn:hover, nav .nav-btn:focus {
+            background: #00796b;
+            color: #ffd600;
+            transform: translateY(-2px) scale(1.04);
+        }
+        main {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        h1 {
+            color: #0097a7;
+            margin-top: 32px;
+            margin-bottom: 24px;
+            font-size: 2.2em;
+            text-align: center;
+        }
+        .reviews-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+        }
+        .review-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 28px 22px;
+            flex: 1 1 280px;
+            min-width: 260px;
+            max-width: 340px;
+            margin-bottom: 18px;
+            text-align: center;
+            position: relative;
+        }
+        .review-card .reviewer {
+            font-weight: bold;
+            color: #00796b;
+            margin-top: 10px;
+        }
+        .review-card .stars {
+            color: #ffd600;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .review-card .before-after {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 12px 0;
+        }
+        .review-card .before-after img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #b2ebf2;
+        }
+        .review-card .before-after span {
+            font-size: 0.9em;
+            color: #666;
+            display: block;
+            text-align: center;
+        }
+        @media (max-width: 700px) {
+            main {
+                padding: 0 4vw;
+            }
+            .reviews-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="โลโก้คลินิก">
+                <span>Living Dental</span>
+            </div>
+            <nav>
+                <a class="nav-btn" href="index.html">หน้าแรก</a>
+                <a class="nav-btn" href="about.html">เกี่ยวกับเรา</a>
+                <a class="nav-btn" href="service.html">บริการ</a>
+                <a class="nav-btn" href="dentist.html">ทีมทันตแพทย์</a>
+                <a class="nav-btn" href="reserv.html">จองคิว</a>
+                <a class="nav-btn" href="reviews.html">รีวิวจากลูกค้า</a>
+                <a class="nav-btn" href="contact.html">ติดต่อเรา</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>รีวิวจากลูกค้า</h1>
+        <div class="reviews-list">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div>“บริการดีมาก คุณหมอใจดีและให้คำแนะนำละเอียด”</div>
+                <div class="before-after">
+                    <div>
+                        <img src="images/before1.jpg" alt="ก่อนทำ">
+                        <span>ก่อนทำ</span>
+                    </div>
+                    <div>
+                        <img src="images/after1.jpg" alt="หลังทำ">
+                        <span>หลังทำ</span>
+                    </div>
+                </div>
+                <div class="reviewer">- คุณอรทัย</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★☆</div>
+                <div>“คลินิกสะอาด อุปกรณ์ทันสมัย ประทับใจค่ะ”</div>
+                <div class="before-after">
+                    <div>
+                        <img src="images/before2.jpg" alt="ก่อนทำ">
+                        <span>ก่อนทำ</span>
+                    </div>
+                    <div>
+                        <img src="images/after2.jpg" alt="หลังทำ">
+                        <span>หลังทำ</span>
+                    </div>
+                </div>
+                <div class="reviewer">- คุณสุชาติ</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div>“จองคิวสะดวก รวดเร็ว พนักงานน่ารัก”</div>
+                <div class="reviewer">- คุณธนพล</div>
+            </div>
+        </div>
+    </main>
+</body>
