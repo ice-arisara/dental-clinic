@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ติดต่อเรา | Living Dental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #fff 100%);
+            margin: 0;
+            color: #333;
+        }
+        header {
+            background: #0097a7;
+            color: #fff;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            height: 70px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 48px;
+            margin-right: 12px;
+        }
+        .logo span {
+            font-size: 1.7em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+        nav .nav-btn {
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 22px;
+            padding: 10px 26px;
+            font-size: 1em;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 0 2px;
+            box-shadow: 0 2px 8px rgba(0,188,212,0.08);
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+            cursor: pointer;
+            outline: none;
+        }
+        nav .nav-btn:hover, nav .nav-btn:focus {
+            background: #00796b;
+            color: #ffd600;
+            transform: translateY(-2px) scale(1.04);
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        h1 {
+            color: #0097a7;
+            margin-top: 32px;
+            margin-bottom: 24px;
+            font-size: 2em;
+            text-align: center;
+        }
+        .contact-info {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 32px 28px;
+            margin-bottom: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            align-items: flex-start;
+        }
+        .contact-details {
+            flex: 1 1 260px;
+            min-width: 240px;
+        }
+        .contact-details p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .contact-details strong {
+            color: #00796b;
+        }
+        .contact-map {
+            flex: 1 1 320px;
+            min-width: 280px;
+        }
+        .contact-map iframe {
+            width: 100%;
+            height: 260px;
+            border: 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #b2ebf2;
+        }
+        .contact-actions {
+            display: flex;
+            gap: 16px;
+            margin: 18px 0 0 0;
+            flex-wrap: wrap;
+        }
+        .chat-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #00b900;
+            color: #fff;
+            border: none;
+            border-radius: 22px;
+            padding: 10px 22px;
+            font-size: 1em;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+        }
+        .chat-btn.fb {
+            background: #1877f2;
+        }
+        .chat-btn:hover, .chat-btn:focus {
+            background: #00796b;
+            color: #ffd600;
+            transform: translateY(-2px) scale(1.04);
+        }
+        .chat-btn img {
+            width: 22px;
+            height: 22px;
+        }
+        .contact-form-section {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 32px 28px;
+            margin-bottom: 32px;
+        }
+        .contact-form-section h2 {
+            color: #0097a7;
+            margin-top: 0;
+        }
+        form label {
+            font-weight: 600;
+            color: #00796b;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #b2ebf2;
+            margin-top: 4px;
+            margin-bottom: 18px;
+            font-size: 1em;
+        }
+        form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        button[type="submit"] {
+            background: #ffd600;
+            color: #00796b;
+            border: none;
+            border-radius: 24px;
+            padding: 12px 0;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 8px;
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+        }
+        button[type="submit"]:hover, button[type="submit"]:focus {
+            background: #fffde7;
+            color: #0097a7;
+            transform: translateY(-2px) scale(1.04);
+        }
+        .alert {
+            background: #e0f7fa;
+            color: #00796b;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            text-align: center;
+            font-weight: bold;
+            display: none;
+        }
+        @media (max-width: 800px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 18px;
+            }
+            .contact-map iframe {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="โลโก้คลินิก">
+                <span>Living Dental</span>
+            </div>
+            <nav>
+                <a class="nav-btn" href="index.html">หน้าแรก</a>
+                <a class="nav-btn" href="about.html">เกี่ยวกับเรา</a>
+                <a class="nav-btn" href="service.html">บริการ</a>
+                <a class="nav-btn" href="dentist.html">ทีมทันตแพทย์</a>
+                <a class="nav-btn" href="reserv.html">จองคิว</a>
+                <a class="nav-btn" href="index.html#reviews">รีวิวจากลูกค้า</a>
+                <a class="nav-btn" href="contact.html">ติดต่อเรา</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>ติดต่อ Living Dental</h1>
+        <div class="contact-info">
+            <div class="contact-details">
+                <p><strong>ที่อยู่:</strong> 123 ถนนสุขุมวิท แขวงบางนา เขตบางนา กรุงเทพฯ 10260</p>
+                <p><strong>เบอร์โทร:</strong> <a href="tel:021234567" style="color:#0097a7;text-decoration:none;">02-123-4567</a></p>
+                <p><strong>อีเมล:</strong> <a href="mailto:info@livingdental.com" style="color:#0097a7;text-decoration:none;">info@livingdental.com</a></p>
+                <p><strong>เวลาทำการ:</strong> จันทร์-เสาร์ 09:00-19:00 น. <br> (หยุดวันอาทิตย์)</p>
+                <div class="contact-actions">
+                    <a class="chat-btn" href="https://line.me/R/ti/p/@porpeangdental" target="_blank">
+                        <img src="images/line-icon.png" alt="LINE"> แชท LINE
+                    </a>
+                    <a class="chat-btn fb" href="https://m.me/porpeangdental" target="_blank">
+                        <img src="images/fb-icon.png" alt="Facebook"> แชท Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="contact-map">
+                <!-- ตัวอย่าง Google Map ฝัง (เปลี่ยน src ให้ตรงกับที่ตั้งคลินิกของคุณ) -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.729273239986!2d100.60183231533454!3d13.726717101258616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f2e2e2e2e2e%3A0x1234567890abcdef!2zTGl2aW5nIERlbnRhbA!5e0!3m2!1sth!2sth!4v1710000000000!5m2!1sth!2sth" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <section class="contact-form-section">
+            <h2>แบบฟอร์มติดต่อกลับ</h2>
+            <div class="alert" id="alertBox"></div>
+            <form id="contactForm" autocomplete="off">
+                <label for="fullname">ชื่อ-นามสกุล</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="email">อีเมล</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">ข้อความ</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">ส่งข้อความ</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        // ระบบแจ้งเตือนหลังส่งฟอร์ม (ฝั่ง client)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('alertBox').style.display = 'block';
+            document.getElementById('alertBox').innerText = 'ส่งข้อความเรียบร้อยแล้ว ขอบคุณที่ติดต่อเรา';
+            this.reset();
+            setTimeout(function(){
+                document.getElementById('alertBox').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
